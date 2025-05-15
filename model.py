@@ -17,6 +17,10 @@ from nltk.stem import SnowballStemmer, WordNetLemmatizer
 import nltk
 from sklearn.model_selection import train_test_split
 
+nltk.download('stopwords')
+nltk.download('punkt_tab')
+nltk.download('wordnet')
+
 # Initialize necessary tools
 speller = Speller()
 stopword = stopwords.words("english")
@@ -49,7 +53,7 @@ def text_pre_processing(text):
     return " ".join(new_text)
 
 
-data = pd.read_csv("src/hamvsspam.csv", encoding='latin1')
+data = pd.read_csv("./src/hamvsspam.csv", encoding='latin1')
 # Keep only the first two columns (label and message)
 data = data.iloc[:, :2]
 
@@ -83,11 +87,9 @@ text_clf_pipeline.fit(X_train, y_train)
 # Save the model
 joblib.dump(text_clf_pipeline, 'svm_text_pipeline.pkl')
 
-# Predict on train set
-y_pred_train = model.predict(X_train)
+y_pred_train = text_clf_pipeline.predict(X_train)
+y_pred_test = text_clf_pipeline.predict(X_test)
 
-# Predict on test set
-y_pred_test = model.predict(X_test)
 
 print("On training data\n",classification_report(y_train, y_pred_train))
 
