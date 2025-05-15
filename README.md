@@ -65,52 +65,39 @@ Live app: [Ham vs Spam](http://34.131.53.70:8502/)
 The dataset used is hamvsspam.csv located in the ./src/ directory.
 
 ### Installation & Setup
-1. Clone the Repository
-bash
-Copy
-Edit
-git clone https://github.com/your-username/spam-ham-classifier.git
-cd spam-ham-classifier
-2. Install Dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Required Packages:
 
-text
-Copy
-Edit
-scikit-learn
-nltk
-pandas
-numpy
-joblib
-emoji
-contractions
-textacy
-autocorrect
-streamlit
-3. Download NLTK Resources
-python
-Copy
-Edit
+#### 1. Clone the Repository
+```bash
+git clone "https://github.com/Harshita772/Ham_vs_Spam-Detection.git"
+cd Ham_vs_Spam_Detection
+```
+
+#### 2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+#### 3. Download NLTK Resources
+```python
+import nltk
 nltk.download('stopwords')
 nltk.download('punkt_tab')
 nltk.download('wordnet')
-Or manually:
+```
 
-bash
-Copy
-Edit
+Or manually:
+```bash
 python -m nltk.downloader all
-4. Train the Model
-bash
-Copy
-Edit
+```
+
+#### 4. Train the Model
+```bash
 python model.py
-5. Launch the Web App
-bash
-Copy
-Edit
+```
+
+#### 5. Launch the Web App
+```bash
 streamlit run app.py
+```
+
+---
