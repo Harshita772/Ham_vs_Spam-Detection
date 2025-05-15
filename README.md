@@ -101,3 +101,23 @@ streamlit run app.py
 ```
 
 ---
+
+### Experiments
+
+This project includes several Jupyter notebooks under active development to explore different modeling approaches for spam detection:
+
+#### `BERT+SVM.ipynb`
+- Combines **BERT embeddings** with a **Support Vector Machine** classifier.
+- Uses pretrained BERT for feature extraction and SVM for classification.
+- Useful for evaluating transformer-based embeddings on SMS spam detection.
+
+#### `MultinomialNB.ipynb`
+- Implements a **Multinomial Naive Bayes** classifier using CountVectorizer features.
+- Simple yet effective baseline for text classification tasks.
+- Helps compare traditional probabilistic methods with more complex models.
+
+#### `SVM.ipynb`
+- Standalone SVM model with feature extraction and evaluation.
+- Mirrors the core logic used in `model.py`, providing a more interactive exploration environment.
+
+These notebooks are intended for experimentation, model comparison, and fine-tuning. They provide insights into how different models perform on the same dataset.
