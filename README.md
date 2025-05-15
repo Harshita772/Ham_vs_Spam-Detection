@@ -68,8 +68,8 @@ The dataset used is hamvsspam.csv located in the ./src/ directory.
 
 #### 1. Clone the Repository
 ```bash
-git clone (https://github.com/your-username/spam-ham-classifier.git)
-cd spam-ham-classifier
+git clone "https://github.com/Harshita772/Ham_vs_Spam-Detection.git"
+cd Ham_vs_Spam_Detection
 ```
 
 #### 2. Install Dependencies
